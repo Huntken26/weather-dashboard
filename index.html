@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="assets\CSS\style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets\CSS\style.css" />
     <title>Search our Weather Dashboard!</title>
 </head>
 
@@ -22,77 +22,123 @@
     </header>
 
     <main>
-        
-            <!--Search section takes up entire left side etc-->
-            <div class="left-wrapper">
-                <form>
-                    <div class="form-row">
-                        <!--Search box-->
-                        <div class="col-2">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                    </div>
-                </form>
-                <div>
-                    <h2>Search for a city</h2>
+        <form>
+            <div class="form-row">
+                <!--Search box-->
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Search">
                 </div>
-                <div class="search-button"></div>
-                <button type="button" class="btn btn-secondary btn-lg">Search</button>
-
-<div class="top-wrapper">
-    <div class="list-wrapper">
-        <!-- Saved Cities from the search-->
-        <div class="col-3">
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
-            <br>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
-            <br>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
-            <br>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
-            <br>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+            </div>
+        </form>
+        <div>
+            <h4>Search for your city</h4>
         </div>
-    </div>
-</div>
-<!-- End of Search section -->
-
-
-<!-- Home City with stats -->
-<div class="home-wrapper">
-    <div class="jumbotron jumbotron-fluid bg-warning">
-        <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <div class="search-button">
+            <button type="button" class="btn btn-secondary btn-lg">Search</button>
         </div>
-      </div>
-</div>
-</div>
-        
-            
 
-            <div class="row">
-                <!-- 5 cards showing weather data for the week  -->
-                <div class="">
-                    <h2>5 day forecast</h2>
-                    <h3>MM/DD/YYYY</h3>
-                    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
-                        <div class="card-header">City</div>
-                        <div class="card-body">
-                            <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="list-wrapper">
+            <!-- Saved Cities from the search-->
+            <ul class="col-3">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+                <br>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+                <br>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+                <br>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+                <br>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"></a>
+        </div>
+        </ul>
+
+
+        <!-- Home City with stats -->
+        <div class="home-wrapper">
+            <div class="bg-warning">
+                <div class="container">
+                    <h1 class="display-4">Home City Weather</h1>
+                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                        parent.</p>
                 </div>
-                    <!--cards display the weather data for each day  -->
-                    
-                    
-                
-        
+            </div>
+        </div>
+        </div>
+
+
+        <!-- 5 cards showing weather data for the week  -->
+        <div class="row">
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
+                <div class="card-header">
+                    <h4> MM/DD/YYYY</h4> City
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-emoji">Emoji:</li>
+                        <li class="card-temp">Temp:</li>
+                        <li class="card-wind">Wind:</li>
+                        <li class="card-humidity">Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
+                <div class="card-header">
+                    <h4> MM/DD/YYYY</h4> City
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-emoji">Emoji:</li>
+                        <li class="card-temp">Temp:</li>
+                        <li class="card-wind">Wind:</li>
+                        <li class="card-humidity">Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
+                <div class="card-header">
+                    <h4> MM/DD/YYYY</h4> City
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-emoji">Emoji:</li>
+                        <li class="card-temp">Temp:</li>
+                        <li class="card-wind">Wind:</li>
+                        <li class="card-humidity">Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
+                <div class="card-header">
+                    <h4> MM/DD/YYYY</h4> City
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-emoji">Emoji:</li>
+                        <li class="card-temp">Temp:</li>
+                        <li class="card-wind">Wind:</li>
+                        <li class="card-humidity">Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 10rem;">
+                <div class="card-header">
+                    <h4> MM/DD/YYYY</h4> City
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-emoji">Emoji:</li>
+                        <li class="card-temp">Temp:</li>
+                        <li class="card-wind">Wind:</li>
+                        <li class="card-humidity">Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--cards display the weather data for each day  -->
+
+
+
+
 
 
     </main>

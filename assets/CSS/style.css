@@ -1,0 +1,31 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+ main {
+    display: flex;
+    flex-direction: column ;
+ }
+
+ .left-wrapper {
+    margin: 30px;
+    float: left;
+ }
+
+ .list-wrapper {
+    margin-top: 30px;
+ }
+
+ .home-wrapper {
+    
+    height: 200px;
+    width: 60%;
+    float: right;
+ }
+
+ .card {
+    display: flex;
+    margin: 20px;
+ }

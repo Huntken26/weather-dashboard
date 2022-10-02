@@ -2,12 +2,12 @@
 
 ## Description:
 
-For this project I will build a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses Tailwind, jQuery, moment.js, and Open Weather API.
+For this project I have built a weather dashboard that you can use to search for a city and see the weather data/statistics in a simple format. You can see the temperature, wind speed, humidity, and so on. You can also search up to five cities and have them automatically saved as options in a list. This capability makes things more convenient for you. This app uses technologies such as Tailwind, jQuery, moment.js, and Open Weather API.
 
 
-## Installation:
+## Deployed Link:
 
-N/A
+https://huntken26.github.io/weather-dashboard/
 
 ## Usage:
 
@@ -20,15 +20,8 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
-## Credits:
 
-N/A
-
-## Deployed:
-
-https://huntken26.github.io/weather-dashboard/
-
-## Screenshot/ Walkthrough:
+## Screenshot Walkthrough:
 
 ## License:
 

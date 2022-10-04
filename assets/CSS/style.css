@@ -4,24 +4,19 @@
    line-height: 1;
 }
 
-#search-wrapper {
+#large-wrapper {
    display: flex;
    margin: 20px;
-   background-color: aqua;
+}
+
+.list-wrapper {
+   margin-right: 30px;
 }
 
 .list-group-item {
    width: 250px;
 }
 
-/* Need to change this card container positioning or display...
-   make it fit within the parameters while still being repsonsive.
-   mobile first!   */
-#card-container {
-   position: relative;
-   left: 330px;
-   bottom: 250px;
-}
 
 .card {
    margin: 5px;

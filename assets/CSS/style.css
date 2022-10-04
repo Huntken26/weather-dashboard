@@ -4,9 +4,19 @@
    line-height: 1;
 }
 
+body {
+   background: url(https://wallpaperaccess.com/full/896979.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
 #large-wrapper {
    display: flex;
    margin: 20px;
+}
+
+.btn {
+   margin-left: 100px;
 }
 
 .list-wrapper {

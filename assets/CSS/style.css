@@ -10,6 +10,12 @@ body {
    background-repeat: no-repeat;
 }
 
+#or {
+   position: relative;
+   left: 8rem;
+   color: aliceblue;
+}
+
 #large-wrapper {
    display: flex;
    margin: 20px;

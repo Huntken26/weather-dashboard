@@ -2,7 +2,7 @@
 
 ## Description:
 
-For this project I have built a weather dashboard that you can use to search for a city and see the weather data/statistics in a simple format. You can see the temperature, wind speed, humidity, and so on. You can also search up to five cities and have them automatically saved as options in a list. This capability makes things more convenient for you. This app uses technologies such as Tailwind, jQuery, moment.js, and Open Weather API.
+For this project I have built a weather dashboard that you can use to search for a city and see the weather data/statistics in a simple format. You can see the temperature, wind speed, humidity, and so on. You can also search up to five cities and have them automatically saved as options in a list. This capability makes things more convenient for you. This app uses technologies such as Bootstrap, jQuery, Openstreetmap API, moment.js, and Open Weather API.
 
 
 ## Deployed Link:
@@ -11,14 +11,6 @@ https://huntken26.github.io/weather-dashboard/
 
 ## Usage:
 
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
 
 
 ## Screenshot Walkthrough:

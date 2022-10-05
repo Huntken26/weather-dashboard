@@ -11,13 +11,13 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets\CSS\style.css" />
-    <title>Search our Weather Dashboard!</title>
+    <title>Local Weather Search!</title>
 </head>
 
 <body>
     <header>
         <nav class=" navbar justify-content-center navbar-light bg-primary">
-            <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+            <span class="navbar-brand mb-0 h1"><i class='fas fa-cloud-sun'></i>Weather Dashboard</span>
         </nav>
     </header>
     <br>
@@ -27,31 +27,39 @@
             <div>
 
                 <!-- Created a form for the city search -->
+                <button type="button" id="find-me" class="btn btn-secondary btn-sm"> Use my location <i class='fas fa-map-marker-alt'></i></button>
+                <h4 id="or"><em>or</em></h4>
+                <button type="button" id="search-button" class="btn btn-secondary btn-md">Search</button>
                 <form class="form col" id="search-form">
                     <input id="search-input" type="text" class="form-control" placeholder="Search for your city">
-                    <!--Search box-->
-
                 </form>
-                    <button type="button" id ="search-button" class="btn btn-secondary btn-lg">Search</button>
+                <p id="status"></p>
+                <p id="location-data"></p>
                 <br>
                 <div class="list-wrapper">
                     <div>
                         <!-- Saved Cities from the user's search-->
                         <ul class="col-3">
-                            <div><a href="#" id="list1" class="list-group-item list-group-item-action list-group-item-dark">
-                                    Searched City</a></div>
                             <br>
-                            <div><a href="#" id="list2" class="list-group-item list-group-item-action list-group-item-dark">
-                                    Searched City</a></div>
+                            <div><a href="#" id="list1"
+                                    class="list-group-item list-group-item-action list-group-item-dark">
+                                </a></div>
                             <br>
-                            <div><a href="#" id="list3" class="list-group-item list-group-item-action list-group-item-dark">
-                                    Searched City</a></div>
+                            <div><a href="#" id="list2"
+                                    class="list-group-item list-group-item-action list-group-item-dark">
+                                </a></div>
                             <br>
-                            <div><a href="#" id="list4" class="list-group-item list-group-item-action list-group-item-dark">
-                                    Searched City</a></div>
+                            <div><a href="#" id="list3"
+                                    class="list-group-item list-group-item-action list-group-item-dark">
+                                </a></div>
                             <br>
-                            <div><a href="#" id="list5" class="list-group-item list-group-item-action list-group-item-dark">
-                                    Searched City</a></div>
+                            <div><a href="#" id="list4"
+                                    class="list-group-item list-group-item-action list-group-item-dark">
+                                </a></div>
+                            <br>
+                            <div><a href="#" id="list5"
+                                    class="list-group-item list-group-item-action list-group-item-dark">
+                                </a></div>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +69,7 @@
             <div class="col-sm-">
                 <div class="row ml-2 border border-dark rounded bg-primary">
                     <div class="col-sm-12" id="current-weather">
-                        <h2 class="city-name mb-1 mt-2 bolder" id="current-city"> Insert Home City</h2>
+                        <h2 class="city-name mb-1 mt-2 bolder" id="current-city"> Home</h2>
                         <p>Temperature:<span class="current" id="temperature"></span></p>
                         <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
                         <p>Humidity:<span class="current" id="humidity"></span></p>
@@ -72,66 +80,70 @@
                 <div class="row" id="card-container">
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4> MM/DD/YYYY</h4> City
+                            <h4 id="day1"> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
+                                <li class="card-emoji">Emoji:<span></span></li>
+                                <li class="card-temp">Temp:<span></span></li>
+                                <li class="card-wind">Wind:<span></span></li>
+                                <li class="card-humidity">Humidity:<span></span></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4> MM/DD/YYYY</h4> City
+                            <h4 id="day2"> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
+                                <li class="card-emoji">Emoji:<span></span></li>
+                                <li class="card-temp">Temp:<span></span></li>
+                                <li class="card-wind">Wind:<span></span></li>
+                                <li class="card-humidity">Humidity:<span></span></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4> MM/DD/YYYY</h4> City
+                            <h4 id="day3"> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
+                                <li class="card-emoji">Emoji:<span></span></li>
+                                <li class="card-temp">Temp:<span></span></li>
+                                <li class="card-wind">Wind:<span></span></li>
+                                <li class="card-humidity">Humidity:<span></span></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4> MM/DD/YYYY</h4> City
+                            <h4 id="day4"> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
+                                <li class="card-emoji">Emoji:<span></span></li>
+                                <li class="card-temp">Temp:<span></span></li>
+                                <li class="card-wind">Wind:<span></span></li>
+                                <li class="card-humidity">Humidity:<span></span></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4> MM/DD/YYYY</h4> City
+                            <h4 id="day5"> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li class="card-emoji">Emoji:</li>
-                                <li class="card-temp">Temp:</li>
-                                <li class="card-wind">Wind:</li>
-                                <li class="card-humidity">Humidity:</li>
+                                <li class="card-emoji">Emoji:<span></span></li>
+                                <li class="card-temp">Temp:<span></span></li>
+                                <li class="card-wind">Wind:<span></span></li>
+                                <li class="card-humidity">Humidity:<span></span></li>
                             </ul>
                         </div>
                     </div>

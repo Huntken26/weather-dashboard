@@ -1,36 +1,25 @@
-// Setup variables and query selectors
-//On click event for search button
-//jQuery to setup local storage for the searched cities
-//Momentjs for the current date and time, convert it to the weather api?
-// Ajax or fetch to get the data from OpenWeather API and target/update each section
-//funcitons- search button; stringify array for total cities searched; display 5 day weather stats etc
-//call the functions at the bottom 
+//Geocoding API
+// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
-function weatherFunction() {
-  var currentDate = "";
-  var currentCity = "";
-  var searchInput;
-  var formInput;
-  var queryString;
+// 5 day weather apiKey
+// api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+// example string =   "http://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=" + APIKey;
+var searchButton = document.getElementById("search-button");
+var city = document.getElementById("search-input");
+var APIKey = "22c565aa5c724c6f3568692f5208a088";
+var queryString =
+  "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIKey;
 
-$.ajax({
-    url: requestUrl,
-    method: 'GET',
-  }).then(function (response) {
-    console.log('AJAX Response \n-------------');
-    console.log(response);
-  });
-
-  var timeNow = moment();
-  $("#currentDay").text(timeNow.format("LLLL"));
-
-  $(".btn").on("click", function citySearch(event) {
-    event.preventDefault();
-    location.assign();
-    localStorage.setItem();
-  });
-
-  $().val(localStorage.getItem());
+function fetchLocation() {
+  fetch(queryString)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
 }
+searchButton.addEventListener("click", fetchLocation);
 
-weatherFunction();
+//var newString = " api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
+// function fetchWeather() {}

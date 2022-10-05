@@ -25,36 +25,32 @@
     <main>
         <section id="large-wrapper">
             <div>
-                <form>
-                    <!-- Created a form for the city search -->
-                    <div class="form">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Search for your city">
-                            <!--Search box-->
-                        </div>
-                    </div>
+
+                <!-- Created a form for the city search -->
+                <form class="form col" id="search-form">
+                    <input id="search-input" type="text" class="form-control" placeholder="Search for your city">
+                    <!--Search box-->
+
                 </form>
-                <div class="search-button">
-                    <button type="button" class="btn btn-secondary btn-lg">Search</button>
-                </div>
+                    <button type="button" id ="search-button" class="btn btn-secondary btn-lg">Search</button>
                 <br>
                 <div class="list-wrapper">
                     <div>
                         <!-- Saved Cities from the user's search-->
                         <ul class="col-3">
-                            <div><a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                            <div><a href="#" id="list1" class="list-group-item list-group-item-action list-group-item-dark">
                                     Searched City</a></div>
                             <br>
-                            <div><a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                            <div><a href="#" id="list2" class="list-group-item list-group-item-action list-group-item-dark">
                                     Searched City</a></div>
                             <br>
-                            <div><a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                            <div><a href="#" id="list3" class="list-group-item list-group-item-action list-group-item-dark">
                                     Searched City</a></div>
                             <br>
-                            <div><a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                            <div><a href="#" id="list4" class="list-group-item list-group-item-action list-group-item-dark">
                                     Searched City</a></div>
                             <br>
-                            <div><a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                            <div><a href="#" id="list5" class="list-group-item list-group-item-action list-group-item-dark">
                                     Searched City</a></div>
                         </ul>
                     </div>

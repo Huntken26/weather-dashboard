@@ -3,9 +3,8 @@
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 // example string =   "http://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=" + APIKey;
 var locateButton = document.getElementById("find-me");
-var city = document.getElementById("list1");
 var searchButton = document.getElementById("search-button");
-
+var listButtons = document.getElementsByClassName("list-group-item")
 
 //Created a function to capture the geolocation data from the user's browser and use that for the openweather api
   function locateApi() {
@@ -27,6 +26,7 @@ var searchButton = document.getElementById("search-button");
         return response.json();
       })
       .then(function (data) {
+        console.log(" 'Use my location' API DATA below");
         console.log(data);
       });
     }
@@ -51,52 +51,36 @@ var searchButton = document.getElementById("search-button");
     let input = document.getElementById("search-input").value;
     let APIKey = "f54d50bfb2e404deefe09cc2818a598f";
     let searchString = "http://api.openweathermap.org/geo/1.0/direct?q=" + input + "&appid=" + APIKey;
-
+// get local storage and set local storage to the buttons in the ul
     fetch(searchString)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
+      console.log("search button lat/lon below");
       console.log(data);
+      console.log("LAT", data[0].lat);
+      console.log("LON", data[0].lon);
+      var LAT = data[0].lat;
+      var LON = data[0].lon;
+      fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + LAT + "&lon=" + LON + "&units=imperial" + "&appid=" + APIKey)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log("search button weather below");
+        console.log(data);
+        // change text value of current city and cards
+      })
     });
-
-    // function successSearch() {
-    //   let latitude  = position.coords.latitude;
-    //   let longitude = position.coords.longitude;
-    //   let APIKey = "f54d50bfb2e404deefe09cc2818a598f";
-    //   let newString = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial" + "&appid=" + APIKey;
-  
-    //   fetch(newString)
-    //   .then(function (response) {
-    //     return response.json();
-    //   })
-    //   .then(function (data) {
-    //     console.log(data);
-    //   });
-  
-    // }
   }
 
 searchButton.addEventListener('click', searchApi);
 
-//   Latitude /lngitude 
-// Atlanta 33.748997 / -84.387985
-// Chicago 41.883228 / -87.632401
-// Denver 39.739235 / -104.990250
-// Los Angeles 34.052235 / -118.243683
-// New York City 40.712776 / -74.005974
 
 
-// function fetchLocation() {
-//   fetch(queryString)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data);
-//     });
-// }
-// searchButton.addEventListener("click", fetchLocation);
+function searchedCities() {
 
-//var newString = " api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
-// function fetchWeather() {}
+}
+
+listButtons.addEventListener('click', searchedCities);

@@ -4,10 +4,9 @@
 // example string =   "http://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=" + APIKey;
 var locateButton = document.getElementById("find-me");
 var city = document.getElementById("list1");
-var APIKey = "22c565aa5c724c6f3568692f5208a088";
-var latitude;
-var longitude;
-var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
+
+
+// var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
 
 
 //Created a function to use the Geolocation API from the user's browser. Obtained this idea from MDN web docs
@@ -16,14 +15,26 @@ var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" +
     const status = document.querySelector('#status');
     const locationData = document.querySelector('#location-data');
 
-    locationData.textContent = '';
+
   
+    locationData.textContent = '';
+  //Created a function to capture the geolocation data from the user's browser and use that for the openweather api
     function success(position) {
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      var APIKey = "f54d50bfb2e404deefe09cc2818a598f";
+      var queryString = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
   
       status.textContent = '';
       locationData.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+
+      fetch(queryString)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+      });
     }
   
     function error() {
@@ -36,10 +47,10 @@ var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" +
       status.textContent = 'Locating…';
       navigator.geolocation.getCurrentPosition(success, error);
     }
+    
+      }
   
-  }
-  
-  document.querySelector('#find-me').addEventListener('click', geoLocate);
+ locateButton.addEventListener('click', geoLocate);
 
 
 //   Latitude /lngitude 

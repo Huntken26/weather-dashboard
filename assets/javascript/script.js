@@ -6,24 +6,18 @@ var locateButton = document.getElementById("find-me");
 var city = document.getElementById("list1");
 
 
-// var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
 
-
-//Created a function to use the Geolocation API from the user's browser. Obtained this idea from MDN web docs
+//Created a function to capture the geolocation data from the user's browser and use that for the openweather api
   function geoLocate() {
-
-    const status = document.querySelector('#status');
-    const locationData = document.querySelector('#location-data');
-
-
-  
+    var status = document.querySelector('#status');
+    var locationData = document.querySelector('#location-data');
     locationData.textContent = '';
-  //Created a function to capture the geolocation data from the user's browser and use that for the openweather api
+
     function success(position) {
       var latitude  = position.coords.latitude;
       var longitude = position.coords.longitude;
       var APIKey = "f54d50bfb2e404deefe09cc2818a598f";
-      var queryString = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
+      var queryString = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial" + "&appid=" + APIKey;
   
       status.textContent = '';
       locationData.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;

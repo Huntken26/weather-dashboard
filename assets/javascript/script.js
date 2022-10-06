@@ -2,15 +2,15 @@
 // 5 day weather apiKey
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 // example string =   "http://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=" + APIKey;
-var searchButton = document.getElementById("");
-var city = document.getElementById("search-input");
+var locateButton = document.getElementById("find-me");
+var city = document.getElementById("list1");
 var APIKey = "22c565aa5c724c6f3568692f5208a088";
 var latitude;
 var longitude;
-var queryString = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIKey;
+var queryString = "http://api.openweathermap.org/data/2.5/forecast?=" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey;
 
 
-//Created a function to use the Geolocation API from the user's browser
+//Created a function to use the Geolocation API from the user's browser. Obtained this idea from MDN web docs
   function geoLocate() {
 
     const status = document.querySelector('#status');
@@ -40,6 +40,15 @@ var queryString = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&a
   }
   
   document.querySelector('#find-me').addEventListener('click', geoLocate);
+
+
+//   Latitude /lngitude 
+// Atlanta 33.748997 / -84.387985
+// Chicago 41.883228 / -87.632401
+// Denver 39.739235 / -104.990250
+// Los Angeles 34.052235 / -118.243683
+// New York City 40.712776 / -74.005974
+
 
 // function fetchLocation() {
 //   fetch(queryString)

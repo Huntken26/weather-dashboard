@@ -10,6 +10,13 @@ body {
    background-repeat: no-repeat;
 }
 
+#cities-title {
+   text-decoration: underline;
+   position: relative;
+   left: 3rem;
+   color: rgb(37, 78, 113);
+}
+
 #or {
    position: relative;
    left: 8rem;

@@ -11,7 +11,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets\CSS\style.css" />
-    <title>Local Weather Search!</title>
+    <title>  Local Weather Search </title>
 </head>
 
 <body>
@@ -26,42 +26,42 @@
         <section id="large-wrapper">
             <div>
 
-                <!-- Created a form for the city search -->
+                <!-- Created a button to use Geolocation api. I commented out the search form since I couldn't figure out how to 
+                convert the user input into latitude/longitude data for the weather api-->
                 <button type="button" id="find-me" class="btn btn-secondary btn-sm"> Use my location <i class='fas fa-map-marker-alt'></i></button>
-                <h4 id="or"><em>or</em></h4>
-                <button type="button" id="search-button" class="btn btn-secondary btn-md">Search</button>
-                <form class="form col" id="search-form">
+                <!-- <h4 id="or"><em>or</em></h4>
+                <button type="button" id="search-button" class="btn btn-secondary btn-md">Search</button> -->
+                <!-- <form class="form col" id="search-form">
                     <input id="search-input" type="text" class="form-control" placeholder="Search for your city">
-                </form>
+                </form> -->
                 <p id="status"></p>
                 <p id="location-data"></p>
-                <br>
+                
                 <div class="list-wrapper">
-                    <div>
-                        <!-- Saved Cities from the user's search-->
+                        <!-- Added a list of Popular cities which the user can click and check out the weather data-->
+                        <h3 id="cities-title">Popular Cities</h3>
                         <ul class="col-3">
+                            
+                            <button id="list1"
+                                    class="list-group-item list-group-item-action list-group-item-dark"> Atlanta
+                                </button>
                             <br>
-                            <div><a href="#" id="list1"
-                                    class="list-group-item list-group-item-action list-group-item-dark">
-                                </a></div>
+                            <button id="list1"
+                            class="list-group-item list-group-item-action list-group-item-dark"> Chicago
+                        </button>
                             <br>
-                            <div><a href="#" id="list2"
-                                    class="list-group-item list-group-item-action list-group-item-dark">
-                                </a></div>
+                            <button id="list1"
+                            class="list-group-item list-group-item-action list-group-item-dark"> Denver
+                        </button>
                             <br>
-                            <div><a href="#" id="list3"
-                                    class="list-group-item list-group-item-action list-group-item-dark">
-                                </a></div>
+                            <button id="list1"
+                            class="list-group-item list-group-item-action list-group-item-dark"> Los Angeles
+                        </button>
                             <br>
-                            <div><a href="#" id="list4"
-                                    class="list-group-item list-group-item-action list-group-item-dark">
-                                </a></div>
-                            <br>
-                            <div><a href="#" id="list5"
-                                    class="list-group-item list-group-item-action list-group-item-dark">
-                                </a></div>
+                            <button id="list1"
+                            class="list-group-item list-group-item-action list-group-item-dark"> New York City
+                        </button>
                         </ul>
-                    </div>
                 </div>
             </div>
             <br>
@@ -80,7 +80,7 @@
                 <div class="row" id="card-container">
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4 id="day1"> MM/DD/YYYY</h4> City
+                            <h4 id="day1"><i class="fas fa-calendar-alt"></i> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
@@ -94,7 +94,7 @@
 
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4 id="day2"> MM/DD/YYYY</h4> City
+                            <h4 id="day2"> <i class="fas fa-calendar-alt"></i> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
@@ -108,7 +108,7 @@
 
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4 id="day3"> MM/DD/YYYY</h4> City
+                            <h4 id="day3"> <i class="fas fa-calendar-alt"></i> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
@@ -122,7 +122,7 @@
 
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4 id="day4"> MM/DD/YYYY</h4> City
+                            <h4 id="day4"><i class="fas fa-calendar-alt"></i> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>
@@ -136,7 +136,7 @@
 
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; max-height: 12rem;">
                         <div class="card-header">
-                            <h4 id="day5"> MM/DD/YYYY</h4> City
+                            <h4 id="day5"><i class="fas fa-calendar-alt"></i> MM/DD/YYYY</h4> City
                         </div>
                         <div class="card-body">
                             <ul>

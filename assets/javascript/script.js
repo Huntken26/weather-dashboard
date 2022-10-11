@@ -1,7 +1,12 @@
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 var locateButton = document.getElementById("find-me");
 var searchButton = document.getElementById("search-button");
-var listButtons = document.getElementsByClassName("list-group-item");
+
+var list1 = document.getElementById("list1");
+var list2 = document.getElementById("list2");
+var list3 = document.getElementById("list3");
+var list4 = document.getElementById("list4");
+var list5 = document.getElementById("list5");
 
 var city1 = document.getElementById("city1");
 var date1 = document.getElementById("day1");
@@ -102,7 +107,7 @@ function locateApi() {
         humid5.textContent = data.list[39].main.humidity;
       });
   }
-
+//Used example geolocation api from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
   function error() {
     status.textContent = "Unable to retrieve your location";
   }
@@ -121,7 +126,7 @@ function searchApi() {
   let input = document.getElementById("search-input").value;
   let APIKey = "f54d50bfb2e404deefe09cc2818a598f";
   let searchString =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     input +
     "&appid=" +
     APIKey;
@@ -195,25 +200,4 @@ function searchApi() {
 
 searchButton.addEventListener("click", searchApi);
 
-// Latitude /lngitude
-// Atlanta 33.748997 / -84.387985
-// Chicago 41.883228 / -87.632401
-// Denver 39.739235 / -104.990250
-// Los Angeles 34.052235 / -118.243683
-// Minneapolis 44.986656 / -93.258133
-// New York City 40.712776 / -74.005974
 
-// let currentDay = moment().format("L"); //today's date
-// let weekday = moment().format('dddd'); //day of the week
-//     $("#city").text(response.name);
-//     $("#temp").text(`${response.main.temp} °F`);
-//     $("#wind").text(`${response.wind.speed} MPH`);
-// $("#hum").text(`${response.main.humidity} %`);
-
-//     lat = response.coord.lat;
-//     lon = response.coord.lon;
-// function searchedCities() {
-
-// }
-
-// listButtons.addEventListener('click', searchedCities);

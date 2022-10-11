@@ -1,38 +1,32 @@
 # weather-dashboard
 
-
-## Table of Contents: 
-
-
 ## Description:
 
 This app is a weather dashboard which can be used to search for a city and view the weather data for the week. This app uses technologies such as Bootstrap, jQuery, Openstreetmap API, moment.js, and Open Weather API.
-
 
 ## Deployed Link:
 
 https://huntken26.github.io/weather-dashboard/
 
 ## Usage:
-To select a city you have the choice of using the "Use my Location" button, searching the city in the search bar, or picking from the list of Popular Cities. Once selected you can see the temperature, wind speed and humidity data. For a detailed walkthrough view the gif below.
 
+To select a city you have the choice of using the "Use my Location" button or searching the city in the search bar. Once selected you can see the temperature, wind speed and humidity data. For a detailed walkthrough view the gif below.
 
 ## Screenshot Walkthrough:
 
+![tutorial walkthrough](assets\Images\WALKTHROUGH.gif)
 
 ## Credits and Special Thanks:
 
-
- https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples 
+https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
 
 https://openweathermap.org/forecast5#geo5
 
-https://www.openstreetmap.org/about 
+https://www.openstreetmap.org/about
 
 https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys
 
 I also thank my Instructor Kyle, my class TA Ethan, my tutor Chris, and my fellow bootcamp students.
-
 
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
@@ -56,10 +50,8 @@ I also thank my Instructor Kyle, my class TA Ethan, my tutor Chris, and my fello
 
 ![MDN Web Docs](https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white)
 
-
 ## License:
 
 MIT License
 
 Copyright (c) 2022 Kenny H.
-

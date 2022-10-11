@@ -1,8 +1,12 @@
 # weather-dashboard
 
+
+## Table of Contents: 
+
+
 ## Description:
 
-For this project I have built a weather dashboard that you can use to search for a city and see the weather data/statistics in a simple format. You can see the temperature, wind speed, humidity, and so on. You can also search up to five cities and have them automatically saved as options in a list. This capability makes things more convenient for you. This app uses technologies such as Bootstrap, jQuery, Openstreetmap API, moment.js, and Open Weather API.
+This app is a weather dashboard which can be used to search for a city and view the weather data for the week. This app uses technologies such as Bootstrap, jQuery, Openstreetmap API, moment.js, and Open Weather API.
 
 
 ## Deployed Link:
@@ -10,32 +14,52 @@ For this project I have built a weather dashboard that you can use to search for
 https://huntken26.github.io/weather-dashboard/
 
 ## Usage:
-
+To select a city you have the choice of using the "Use my Location" button, searching the city in the search bar, or picking from the list of Popular Cities. Once selected you can see the temperature, wind speed and humidity data. For a detailed walkthrough view the gif below.
 
 
 ## Screenshot Walkthrough:
+
+
+## Credits and Special Thanks:
+
+
+ https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples 
+
+https://openweathermap.org/forecast5#geo5
+
+https://www.openstreetmap.org/about 
+
+https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys
+
+I also thank my Instructor Kyle, my class TA Ethan, my tutor Chris, and my fellow bootcamp students.
+
+
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
+
+![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)
+
+![MDN Web Docs](https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white)
+
 
 ## License:
 
 MIT License
 
 Copyright (c) 2022 Kenny H.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 

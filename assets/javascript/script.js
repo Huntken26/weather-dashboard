@@ -38,6 +38,8 @@ var temp5 = document.getElementById("temperature5");
 var wind5 = document.getElementById("wind-speed5");
 var humid5 = document.getElementById("humidity5");
 
+
+
 //Created a function to capture the geolocation data from the user's browser and to pass that data into the openweather api
 function locateApi() {
   var status = document.querySelector("#status");
@@ -65,49 +67,40 @@ function locateApi() {
         return response.json();
       })
       .then(function (data) {
-        console.log(" 'Use my location' API DATA below");
-        console.log(data);
-        console.log(data.city.name);
-        console.log(data.list[0].main.temp);
-        console.log(data.list[0].wind.speed);
-        console.log(data.list[0].weather[4]);
-        console.log(data.list[0].main.humidity);
         var home = document.getElementById("current-city");
         var hometemp = document.getElementById("temperature");
         var homewind = document.getElementById("wind-speed");
         var homeHumidity = document.getElementById("humidity");
-        home.textContent = data.city.name; //INSERT MOMENT JS
+        home.textContent =
+          data.city.name +
+          " " +
+          moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); //INSERTED MOMENT JS
         hometemp.textContent = data.list[0].main.temp + " F";
         homewind.textContent = data.list[0].wind.speed + " MPH";
         homeHumidity.textContent = data.list[0].main.humidity;
-        city1.textContent = data.city.name;
-        // date1.textContent = data.list[7].dt_txt;
+        city1.textContent = data.list[7].dt_txt;
         temp1.textContent = data.list[7].main.temp + " F";
         wind1.textContent = data.list[7].wind.speed + " MPH";
         humid1.textContent = data.list[7].main.humidity;
-        city2.textContent = data.city.name;
-        date2.textContent;
+        city2.textContent = data.list[15].dt_txt;
         temp2.textContent = data.list[15].main.temp + " F";
         wind2.textContent = data.list[15].wind.speed + " MPH";
         humid2.textContent = data.list[15].main.humidity;
-        city3.textContent = data.city.name;
-        date3.textContent;
+        city3.textContent = data.list[23].dt_txt;
         temp3.textContent = data.list[23].main.temp + " F";
         wind3.textContent = data.list[23].wind.speed + " MPH";
         humid3.textContent = data.list[23].main.humidity;
-        city4.textContent = data.city.name;
-        // date1.textContent = data.list[7].dt_txt;
+        city4.textContent = data.list[31].dt_txt;
         temp4.textContent = data.list[31].main.temp + " F";
         wind4.textContent = data.list[31].wind.speed + " MPH";
         humid4.textContent = data.list[31].main.humidity;
-        city5.textContent = data.city.name;
-        date5.textContent;
+        city5.textContent = data.list[39].dt_txt;
         temp5.textContent = data.list[39].main.temp + " F";
         wind5.textContent = data.list[39].wind.speed + " MPH";
         humid5.textContent = data.list[39].main.humidity;
       });
   }
-//Used example geolocation api from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+  //Used example geolocation api from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
   function error() {
     status.textContent = "Unable to retrieve your location";
   }
@@ -155,42 +148,34 @@ function searchApi() {
           return response.json();
         })
         .then(function (data) {
-          console.log("search button weather below");
-          console.log(data);
-          console.log(data.city.name);
-          console.log(data.list[0].main.temp);
-          console.log(data.list[0].wind.speed);
-          console.log(data.list[0].main.humidity);
           var name = document.getElementById("current-city");
           var temp = document.getElementById("temperature");
           var wind = document.getElementById("wind-speed");
           var humidity = document.getElementById("humidity");
-          name.textContent = data.city.name; //INSERT MOMENT JS
+          name.textContent =
+            data.city.name +
+            " " +
+            moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); //INSERT MOMENT JS
           temp.textContent = data.list[0].main.temp + " F";
           wind.textContent = data.list[0].wind.speed + " MPH";
           humidity.textContent = data.list[0].main.humidity;
-          city1.textContent = data.city.name;
-          // date1.textContent = data.list[7].dt_txt;
+          city1.textContent = data.list[7].dt_txt;
           temp1.textContent = data.list[7].main.temp + " F";
           wind1.textContent = data.list[7].wind.speed + " MPH";
           humid1.textContent = data.list[7].main.humidity;
-          city2.textContent = data.city.name;
-          // date2.textContent = data.list[15].dt_txt;
+          city2.textContent = data.list[15].dt_txt;
           temp2.textContent = data.list[15].main.temp + " F";
           wind2.textContent = data.list[15].wind.speed + " MPH";
           humid2.textContent = data.list[15].main.humidity;
-          city3.textContent = data.city.name;
-          // date3.textContent = data.list[23].dt_txt;
+          city3.textContent = data.list[23].dt_txt;
           temp3.textContent = data.list[23].main.temp + " F";
           wind3.textContent = data.list[23].wind.speed + " MPH";
           humid3.textContent = data.list[23].main.humidity;
-          city4.textContent = data.city.name;
-          // date1.textContent = data.list[31].dt_txt;
+          city4.textContent = data.list[31].dt_txt;
           temp4.textContent = data.list[31].main.temp + " F";
           wind4.textContent = data.list[31].wind.speed + " MPH";
           humid4.textContent = data.list[31].main.humidity;
-          city5.textContent = data.city.name;
-          // date5.textContent = data.list[39].dt_txt;
+          city5.textContent = data.list[39].dt_txt;
           temp5.textContent = data.list[39].main.temp + " F";
           wind5.textContent = data.list[39].wind.speed + " MPH";
           humid5.textContent = data.list[39].main.humidity;
@@ -199,5 +184,3 @@ function searchApi() {
 }
 
 searchButton.addEventListener("click", searchApi);
-
-

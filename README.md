@@ -14,7 +14,9 @@ To select a city you have the choice of using the "Use my Location" button or se
 
 ## Screenshot Walkthrough:
 
-![tutorial walkthrough](assets\Images\WALKTHROUGH.gif)
+![Screenshot (47)](https://user-images.githubusercontent.com/107738986/195006557-182bdfd3-b500-4643-9e54-c32b16450dfd.png)
+
+![Local Weather Search (2)](assets\Images\walkthrough.gif)
 
 ## Credits and Special Thanks:
 

@@ -1,4 +1,5 @@
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+//Set up my variables for both functions
 var locateButton = document.getElementById("find-me");
 var searchButton = document.getElementById("search-button");
 
@@ -38,8 +39,6 @@ var temp5 = document.getElementById("temperature5");
 var wind5 = document.getElementById("wind-speed5");
 var humid5 = document.getElementById("humidity5");
 
-
-
 //Created a function to capture the geolocation data from the user's browser and to pass that data into the openweather api
 function locateApi() {
   var status = document.querySelector("#status");
@@ -67,6 +66,7 @@ function locateApi() {
         return response.json();
       })
       .then(function (data) {
+        console.log(data);
         var home = document.getElementById("current-city");
         var hometemp = document.getElementById("temperature");
         var homewind = document.getElementById("wind-speed");
@@ -75,7 +75,7 @@ function locateApi() {
           data.city.name +
           " " +
           moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); //INSERTED MOMENT JS
-        hometemp.textContent = data.list[0].main.temp + " F";
+        hometemp.textContent = data.list[0].main.temp + " F ";
         homewind.textContent = data.list[0].wind.speed + " MPH";
         homeHumidity.textContent = data.list[0].main.humidity;
         city1.textContent = data.list[7].dt_txt;

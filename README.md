@@ -13,10 +13,14 @@ https://huntken26.github.io/weather-dashboard/
 To select a city you have the choice of using the "Use my Location" button or searching the city in the search bar. Once selected you can see the temperature, wind speed and humidity data. For a detailed walkthrough view the gif below.
 
 ## Screenshot Walkthrough:
-
+1. Go to the site
 ![Screenshot (47)](https://user-images.githubusercontent.com/107738986/195006557-182bdfd3-b500-4643-9e54-c32b16450dfd.png)
 
-![Local Weather Search (2)](assets\Images\walkthrough.gif)
+2. Option 1: Press USE MY LOCATION and enable the location API via the alert on your browser.
+ ![Screenshot (49)](https://user-images.githubusercontent.com/107738986/195011971-b1da4293-4e69-4fdd-8b86-bab4818d1155.png)
+
+ 3. OR Use the Search Bar and type in the city. Then press the search button.
+![Screenshot (50)](https://user-images.githubusercontent.com/107738986/195012257-8651b05f-9858-4286-b027-a6dd1ee01fdb.png)
 
 ## Credits and Special Thanks:
 
